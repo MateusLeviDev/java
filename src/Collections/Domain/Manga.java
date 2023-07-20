@@ -1,17 +1,42 @@
 package Collections.Domain;
 
+import java.util.Comparator;
 import java.util.Objects;
 
-public class Manga {
+public class Manga implements Comparable<Manga> {
     private Long id;
     private String name;
     private double price;
 
     public Manga(Long id, String name, double price) {
-        Objects.requireNonNull(id);
-        Objects.requireNonNull(name);
+        Objects.requireNonNull(id, "ID cant be null");
+        Objects.requireNonNull(name, "Name cant be null");
         this.id = id;
         this.name = name;
+        this.price = price;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
         this.price = price;
     }
 
@@ -35,5 +60,11 @@ public class Manga {
                 ", name='" + name + '\'' +
                 ", price=" + price +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Manga outroManga) {
+        return Double.compare(price, outroManga.price); //Transforma o tipo primitivo em wrapper (valueOf())
+        //return this.id.compareTo(outroManga.id);
     }
 }
