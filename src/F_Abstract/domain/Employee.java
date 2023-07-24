@@ -9,6 +9,8 @@ public abstract class Employee { //não podemos criar um objeto de uma classe ab
         this.salary = salary;
     }
 
+    public abstract void calculateBonus();
+
     @Override
     public String toString() {
         return "Employee{" +
