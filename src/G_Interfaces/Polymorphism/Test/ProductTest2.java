@@ -17,5 +17,6 @@ public class ProductTest2 {
         System.out.println(p2.getName());
         System.out.println(p2.getPrice());
         System.out.println(p2.taxCalculate());
+        TaxCalculator.taxCalculator(p1);
     }
 }
