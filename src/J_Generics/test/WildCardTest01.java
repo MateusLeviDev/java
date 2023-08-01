@@ -26,6 +26,8 @@ public class WildCardTest01 {
     public static void main(String[] args) {
         List<Dog> dogs = List.of(new Dog(), new Dog());
         List<Cat> cats = List.of(new Cat(), new Cat());
+        printConsulta(dogs);
+        printConsulta(cats);
     }
 
     private static void printConsulta (List<? extends Animal> animals){
