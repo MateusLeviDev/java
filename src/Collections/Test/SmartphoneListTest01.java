@@ -16,6 +16,8 @@ public class SmartphoneListTest01 {
         smartphones.add(s2); //collections
         smartphones.add(s3);
 
+        System.out.println(smartphones.toString());
+
         for (Smartphone smartphone : smartphones) { //smartphone irá percorrer a coleção smartphones e imprimirá os valores
             System.out.println(smartphone); //Java chamará implicitamente o método toString() do objeto, caso implementado
         }
@@ -23,6 +25,6 @@ public class SmartphoneListTest01 {
         Smartphone s4 = new Smartphone("2ABC", "Pixel");
         System.out.println(smartphones.contains(s4));
         int indexSmartphone4 = smartphones.indexOf(s4);
-        System.out.println(indexSmartphone4);
+        System.out.println(smartphones.get(indexSmartphone4));
     }
 }
