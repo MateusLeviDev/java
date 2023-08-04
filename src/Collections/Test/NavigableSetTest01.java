@@ -36,9 +36,7 @@ public class NavigableSetTest01 {
         mangas.add(new Manga(2L, "Dragon ball Z", 2.99, 0));
         mangas.add(new Manga(10L, "Aaragon", 2.99, 0));
 
-        for (Manga manga : mangas) {
-            System.out.println(manga);
-        }
+        mangas.forEach(System.out::println);
 
         Manga yuyu = new Manga(21L, "Yuyu Hakusho", 3.2, 5);
 
