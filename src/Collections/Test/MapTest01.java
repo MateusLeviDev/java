@@ -11,20 +11,20 @@ public class MapTest01 {
         map.put("vc", "você");
         map.putIfAbsent("vc2", "você");
         //System.out.println(map);
-        for (String key : map.keySet()) {
-            System.out.println(key + " : " + map.get(key));
-        }
+        map.forEach((key, value) -> System.out.println(key + " : " + value));
 
         System.out.println("-------------");
 
-        for (String value : map.values()) {
-            System.out.println(value);
-        }
+//        for (String value : map.values()) {
+//            System.out.println(value);
+//        }
+        map.values().forEach(value -> System.out.println(value));
+
 
         System.out.println("----------");
-        for(Map.Entry<String, String> entry: map.entrySet()){
-            System.out.println(entry.getKey() +" - "+entry.getValue());
-        }
-
+//        for (Map.Entry<String, String> entry : map.entrySet()) {
+//            System.out.println(entry.getKey() + " - " + entry.getValue());
+//        }
+        map.entrySet().forEach(entry -> System.out.println(entry.getKey() + " - " + entry.getValue()));
     }
 }
