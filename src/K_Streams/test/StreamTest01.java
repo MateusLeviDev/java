@@ -21,7 +21,7 @@ public class StreamTest01 {
     //1. Order LightNovel by title
     //2. Retrieve the first 3 titles light novels with price less than 4
     public static void main(String[] args) {
-        lightNovels.sort(Comparator.comparing(LightNovel::getName));
+        lightNovels.sort(Comparator.comparing(LightNovel::getName)); //sorted por name
         List<String> names = new ArrayList<>();
         for (LightNovel lightNovel : lightNovels) {
             if (lightNovel.getPrice() <= 4) {
