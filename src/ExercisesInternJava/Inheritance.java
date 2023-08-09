@@ -24,7 +24,7 @@ class Cat extends Animal {
 
 public class Inheritance {
     public static void main(String[] args) {
-        Optional<Animal> dog = Optional.of(new Dog());
+        Optional<Dog> dog = Optional.of(new Dog());
         Optional<Cat> cat = Optional.of(new Cat());
 
         makeSound(dog);
@@ -32,6 +32,7 @@ public class Inheritance {
     }
 
     public static void makeSound(Optional<? extends Animal> animal) {
-        animal.isPresent();
+        animal.ifPresent(Animal::makeSound);
     }
+
 }
