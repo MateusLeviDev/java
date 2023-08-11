@@ -2,11 +2,11 @@ package ExercisesInternJava;
 
 import java.util.Optional;
 
-abstract class Animal {
+interface Animal {
     public abstract void makeSound();
 }
 
-class Dog extends Animal {
+class Dog implements Animal {
 
     @Override
     public void makeSound() {
@@ -14,7 +14,7 @@ class Dog extends Animal {
     }
 }
 
-class Cat extends Animal {
+class Cat implements Animal {
 
     @Override
     public void makeSound() {
@@ -31,6 +31,13 @@ public class Inheritance {
         makeSound(cat);
     }
 
+    /**Em Java, a covariância é aplicada principalmente em tipos genéricos e é importante para garantir a segurança de tipos ao trabalhar com herança e polimorfismo.
+     * A covariância é mais notável ao trabalhar com arrays e coleções genéricas, como List, Set e Map.
+     *
+     * @Generics embora extends seja frequentemente associado à herança, nesse contexto, ele se
+     * refere à relação de subtipo entre as classes e à capacidade de lidar com esses subtipos de forma genérica.
+     * Isso faz parte da flexibilidade proporcionada pela tipagem genérica e pelas   interfaces em Java.
+     */
     public static void makeSound(Optional<? extends Animal> animal) {
         animal.ifPresent(Animal::makeSound);
     }
