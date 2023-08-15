@@ -3,7 +3,7 @@ package ExercisesInternJava;
 import java.util.Optional;
 
 interface Animal {
-    public abstract void makeSound();
+    void makeSound();
 }
 
 class Dog implements Animal {
@@ -29,6 +29,12 @@ public class Inheritance {
 
         makeSound(dog);
         makeSound(cat);
+
+        System.out.println(Sum(1,9));
+    }
+
+    public static int Sum(int a, int b) {
+        return a + b;
     }
 
     /**Em Java, a covariância é aplicada principalmente em tipos genéricos e é importante para garantir a segurança de tipos ao trabalhar com herança e polimorfismo.
