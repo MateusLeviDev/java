@@ -14,6 +14,7 @@ public class StreamTest03 {
             new LightNovel("No Game no life", 2.99),
             new LightNovel("Fullmetal Alchemist", 5.99),
             new LightNovel("Kumo desuga", 1.99),
+            new LightNovel("Kumo desuga", 1.99),
             new LightNovel("Monogatari", 4.00)
     ));
 
