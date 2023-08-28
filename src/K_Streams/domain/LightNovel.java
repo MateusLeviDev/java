@@ -2,7 +2,7 @@ package K_Streams.domain;
 
 import java.util.Objects;
 
-public class LightNovel {
+public class    LightNovel {
     private String name;
     private double price;
 
