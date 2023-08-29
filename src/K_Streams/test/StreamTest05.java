@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class StraemTest05 {
+public class StreamTest05 {
     public static void main(String[] args) {
         List<String> words = List.of("Goku", "Gomu", "No", "Mi");
         List<String> collect = words.stream()
