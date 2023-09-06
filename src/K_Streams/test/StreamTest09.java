@@ -19,6 +19,7 @@ public class StreamTest09 {
          * do anterior
          * portanto é feito n[1], n[0]+n[1]
          * feito o cálculo
+         * vao ser criados diversos arrays de indice 0 e 1
          */
         Stream.iterate(new int[]{0,1}, n -> new int[]{n[1], n[0] + n[1]})
                 .limit(4)
@@ -28,13 +29,13 @@ public class StreamTest09 {
         System.out.println("...................");
 
         Stream.iterate(new int[]{0,1}, n -> new int[]{n[1], n[0] + n[1]})
-                .limit(4)
+                .limit(6)
                 .forEach(a -> System.out.println(a[0]));
 
         System.out.println("............................");
 
         int sum = Stream.iterate(new int[]{0, 1}, n -> new int[]{n[1], n[0] + n[1]})
-                .limit(5)
+                .limit(6)
                 .mapToInt(n -> n[0])
                 .sum();
         System.out.println(sum);
