@@ -6,6 +6,7 @@ public class    LightNovel {
     private String name;
     private double price;
     private Category category;
+    private Promotion promotion;
 
     public LightNovel(String name, double price) {
         this.name = name;
@@ -41,6 +42,10 @@ public class    LightNovel {
 
     public double getPrice() {
         return price;
+    }
+
+    public Promotion getPromotion() {
+        return promotion;
     }
 
     @Override
