@@ -26,7 +26,7 @@ public class StreamTest12 {
                 .collect(Collectors.groupingBy(ln -> ln.getPrice() < 6 ? Promotion.UNDER_PRICE : Promotion.NORMAL_PRICE));
         System.out.println(collect);
 
-//        Map<Promotion, List<LightNovel>> collect1 = lightNovels.stream().collect(Collectors.groupingBy(ln -> ln.getPrice() < 6 ? Promotion.UNDER_PRICE : Promotion.NORMAL_PRICE));
+//      Map<Promotion, List<LightNovel>> collect1 = lightNovels.stream().collect(Collectors.groupingBy(ln -> ln.getPrice() < 6 ? Promotion.UNDER_PRICE : Promotion.NORMAL_PRICE));
 
         Map<Category, Map<Promotion, List<LightNovel>>> collect1 = lightNovels.stream()
                 .collect(Collectors.groupingBy(LightNovel::getCategory, Collectors.groupingBy(ln -> ln.getPrice() < 6 ? Promotion.UNDER_PRICE : Promotion.NORMAL_PRICE)));
