@@ -21,7 +21,19 @@ public class StreamTest12 {
             new LightNovel("Monogatari", 4.00, Category.ROMANCE)
     ));
 
+    public static String inverterString(String original) {
+        StringBuilder invertida = new StringBuilder();
+        for (int i = original.length() - 1; i >= 0; i--) {
+            invertida.append(original.charAt(i));
+        }
+        return invertida.toString();
+    }
+
     public static void main(String[] args) {
+        String txt = "acabei de iniciar como dev java na nvoip";
+        System.out.println(inverterString(txt));
+
+
         Map<Promotion, List<LightNovel>> collect = lightNovels.stream()
                 .collect(Collectors.groupingBy(ln -> ln.getPrice() < 6 ? Promotion.UNDER_PRICE : Promotion.NORMAL_PRICE));
         System.out.println(collect);
