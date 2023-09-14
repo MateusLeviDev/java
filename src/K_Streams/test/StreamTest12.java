@@ -30,7 +30,7 @@ public class StreamTest12 {
     }
 
     public static void main(String[] args) {
-        String txt = "acabei de iniciar como dev java na nvoip";
+        String txt = "Java vai me deixar rico";
         System.out.println(inverterString(txt));
 
 
