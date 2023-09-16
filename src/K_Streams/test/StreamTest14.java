@@ -3,8 +3,6 @@ package K_Streams.test;
 import K_Streams.domain.Category;
 import K_Streams.domain.LightNovel;
 import K_Streams.domain.Promotion;
-import K_Streams.domain.Promotion.*;
-
 
 import java.util.*;
 
