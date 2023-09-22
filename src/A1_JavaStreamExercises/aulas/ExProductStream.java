@@ -15,8 +15,7 @@ public class ExProductStream {
                 new Product(5, "Macbook", 1500, 5)
         ));
 
-        products.stream()
-                .
+        //TODO
 
     }
 }
