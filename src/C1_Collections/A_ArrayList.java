@@ -20,6 +20,8 @@ public class A_ArrayList {
         names.put(2,"Souza");
         names.put(3,"Omar");
 
-        names.forEach((id, name) -> System.out.println("Id: " + id + "\nname: " + name));
+        names.forEach((id, name) -> System.out.println("Id: " + id + "\name: " + name));
+
+
     }
 }
