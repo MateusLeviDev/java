@@ -14,7 +14,7 @@ public class B_CollectionsFromExistingData {
 
         List<String> list = new ArrayList<>(data); // will add data as is
         Set<String> set1 = new HashSet<>(data); // will add data keeping only unique values
-        SortedSet<String> set2 = new TreeSet<>(data); // will add data keeping unique values and sorting
+        TreeSet<String> set2 = new TreeSet<>(data); // will add data keeping unique values and sorting
         Set<String> set3 = new LinkedHashSet<>(data); // will add data keeping only unique values and preserving the original order
 
         List<String> collect = Stream.of("xyz", "abc").collect(Collectors.toList());
