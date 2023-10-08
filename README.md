@@ -5,10 +5,21 @@ mente, coleções contêm referências a objetos de qualquer tipo que tem o rela
 interfaces de estrutura de coleções declaram as operações a ser realizadas genericamente em vários tipos de coleções. A Figura 16.1
 lista algumas das interfaces da estrutura das coleções. Várias implementações dessas interfaces são fornecidas dentro da estrutura.
 Você também pode fornecer suas próprias implementações.
->
->
->
->
+
+- métodos
+- - sort
+  - binarySearch
+  - reverse
+  - shuffle
+  - fill
+  - copy
+  - min
+  - max
+  - addAll
+  - frequency
+  - disjoint
+
+
 
 
 
