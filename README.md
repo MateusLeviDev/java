@@ -7,7 +7,7 @@ lista algumas das interfaces da estrutura das coleções. Várias implementaçõ
 Você também pode fornecer suas próprias implementações.
 
 - métodos
-- - sort
+ - sort
   - binarySearch
   - reverse
   - shuffle
@@ -19,6 +19,14 @@ Você também pode fornecer suas próprias implementações.
   - frequency
   - disjoint
 
+```
+public String formatHidingNumber(String cardNumber) {
+
+		cardNumber = cardNumber.replace(" ", "");
+		return cardNumber.substring(0, 6) + "******"
+				+ cardNumber.substring(cardNumber.length() - 4, cardNumber.length());
+	}
+```
 
 
 
