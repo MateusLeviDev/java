@@ -1,4 +1,4 @@
-package A1_JavaStreamExercises.aulas.domain;
+package JavaStreamExercises.aulas.domain;
 
 public class Item {
     private Integer id;

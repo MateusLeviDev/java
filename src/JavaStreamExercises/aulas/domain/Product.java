@@ -1,4 +1,4 @@
-package A1_JavaStreamExercises.aulas.domain;
+package JavaStreamExercises.aulas.domain;
 
 import java.util.Objects;
 

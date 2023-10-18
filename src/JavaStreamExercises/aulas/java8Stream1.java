@@ -1,4 +1,4 @@
-package A1_JavaStreamExercises.aulas;
+package JavaStreamExercises.aulas;
 
 import java.util.Arrays;
 import java.util.List;

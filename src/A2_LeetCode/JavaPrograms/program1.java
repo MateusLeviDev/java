@@ -1,4 +1,4 @@
-package A1_LeetCode.JavaPrograms;
+package A2_LeetCode.JavaPrograms;
 
 public class program1 {
     public static void main(String[] args) {

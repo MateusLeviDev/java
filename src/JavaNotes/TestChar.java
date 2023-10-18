@@ -1,4 +1,4 @@
-package B_1JavaNotes;
+package JavaNotes;
 
 public class TestChar {
     public static void main(String[] args) {

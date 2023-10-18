@@ -1,4 +1,4 @@
-package A1_LeetCode.one;
+package A2_LeetCode.one;
 
 import java.util.Arrays;
 import java.util.HashMap;

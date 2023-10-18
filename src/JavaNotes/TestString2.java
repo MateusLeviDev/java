@@ -1,7 +1,6 @@
-package B_1JavaNotes;
+package JavaNotes;
 
 import java.util.Scanner;
-import java.util.SortedMap;
 
 public class TestString2 {
     //1. Declare a string.

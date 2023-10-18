@@ -1,6 +1,6 @@
-package A1_JavaStreamExercises.aulas;
+package JavaStreamExercises.aulas;
 
-import A1_JavaStreamExercises.aulas.domain.Product;
+import JavaStreamExercises.aulas.domain.Product;
 
 import java.io.IOException;
 import java.nio.file.Files;

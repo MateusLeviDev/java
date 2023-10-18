@@ -1,6 +1,6 @@
-package A1_JavaStreamExercises.aulas;
+package JavaStreamExercises.aulas;
 
-import A1_JavaStreamExercises.aulas.domain.Item;
+import JavaStreamExercises.aulas.domain.Item;
 
 import java.util.ArrayList;
 import java.util.List;

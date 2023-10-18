@@ -1,12 +1,10 @@
-package A1_JavaStreamExercises.aulas;
+package JavaStreamExercises.aulas;
 
-import A1_JavaStreamExercises.aulas.domain.User;
 import K_Streams.domain.Category;
 import K_Streams.domain.LightNovel;
 
 import java.util.*;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.stream.Collectors.toList;

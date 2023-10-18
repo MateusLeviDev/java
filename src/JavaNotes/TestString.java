@@ -1,4 +1,4 @@
-package B_1JavaNotes;
+package JavaNotes;
 
 import java.util.Objects;
 

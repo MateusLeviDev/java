@@ -1,4 +1,4 @@
-package A1_JavaStreamExercises.basic;
+package JavaStreamExercises.basic;
 
 import java.util.List;
 import java.util.Optional;
