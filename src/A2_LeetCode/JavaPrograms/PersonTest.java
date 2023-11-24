@@ -1,4 +1,4 @@
-package ExercisesInternJava;
+package A2_LeetCode.JavaPrograms;
 
 public class PersonTest {
 //    Create a Person class with attributes such as name, age, and address.

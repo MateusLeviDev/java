@@ -1,4 +1,4 @@
-package ExercisesInternJava;
+package A2_LeetCode.JavaPrograms;
 
 public class BankAccount {
     // Create a BankAccount class with methods for depositing

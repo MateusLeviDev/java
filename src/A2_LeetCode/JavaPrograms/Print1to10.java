@@ -1,4 +1,4 @@
-package ExercisesInternJava;
+package A2_LeetCode.JavaPrograms;
 
 import java.util.ArrayList;
 import java.util.List;

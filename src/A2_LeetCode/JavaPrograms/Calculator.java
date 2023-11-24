@@ -1,4 +1,4 @@
-package ExercisesInternJava;
+package A2_LeetCode.JavaPrograms;
 
 public class Calculator {
     public static void main(String[] args) {
