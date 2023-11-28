@@ -11,7 +11,7 @@ import java.util.List;
 public class MethodReferenceTest01 {
 	public static void main(String[] args) {
 		List<Anime> anime = new ArrayList<>(List.of(new Anime("Berserk", 43), new Anime("Naruto", 400)));
-		// Collections.sort(anime, AnimeComparators::compareByTitle);
+		// C1_Collections.Collections.sort(anime, AnimeComparators::compareByTitle);
 		Collections.sort(anime, AnimeComparators::compareByEpisodes);
 		System.out.println(anime);
 
