@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console.enabled: true
+  mock:
+    url: https://run.mocky.io/v3/5794d450-d2e2-4412-8131-73d0293ac1cc
