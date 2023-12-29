@@ -36,5 +36,6 @@ public class User {
         this.userType = userDTO.userType();
         this.password = userDTO.password();
         this.email = userDTO.email();
+        this.document = userDTO.document();
     }
 }

@@ -13,6 +13,7 @@ import java.demo.com.PicPay.domain.dtos.TransactionDTO;
 import java.demo.com.PicPay.domain.transaction.Transaction;
 import java.demo.com.PicPay.domain.users.User;
 import java.demo.com.PicPay.repositories.TransactionRepository;
+import java.demo.com.PicPay.services.NotificationService;
 import java.demo.com.PicPay.services.TransactionService;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -24,13 +25,14 @@ public class TransactionServiceImpl implements TransactionService {
     private final UserServiceImpl userService;
     private final TransactionRepository repository;
     private final RestTemplate restTemplate;
+    private final NotificationService notificationService;
 
     @Value("$mock.url")
     private String mockUrl;
 
 
     @Override
-    public void createTransaction(TransactionDTO transactionDTO) throws Exception {
+    public Transaction createTransaction(TransactionDTO transactionDTO) throws Exception {
         User payer = this.userService.findByIdOrThrowBadRequestException(transactionDTO.payerId());
         User payee = this.userService.findByIdOrThrowBadRequestException(transactionDTO.payeeId());
 
@@ -51,6 +53,11 @@ public class TransactionServiceImpl implements TransactionService {
         this.repository.save(transaction);
         this.userService.saveUser(payer);
         this.userService.saveUser(payee);
+
+        this.notificationService.sendNotification(payer, "Success");
+        this.notificationService.sendNotification(payee, "Success");
+
+        return transaction;
     }
 
     @Override
