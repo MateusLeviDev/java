@@ -1,4 +1,4 @@
-package InheritanceAndPolymorphism;
+package Polymorphism;
 
 import java.util.Calendar;
 

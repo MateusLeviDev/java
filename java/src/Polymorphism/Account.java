@@ -1,4 +1,4 @@
-package InheritanceAndPolymorphism;
+package Polymorphism;
 
 public class Account {
 
