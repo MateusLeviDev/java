@@ -1,0 +1,82 @@
+- quanto mais usar a palavra 'this' quer dizer que estamos juntando o comportamento
+do estado. 
+ou seja, quanto "mais próximas estão as coisas" menor a carga congnitiva da aplicação
+  faz sentido quando pensamos na quantidade de annotations que colocamos no código
+  sem saber necessariamente o que estão fazendo de baixo dos panos.
+
+- variável serve para nos dar contexto acerca do que esta escrito 
+
+
+
+
+
+
+
+
+Docker
+==========
+
+criei um container com base na imagem do mysql:latest. criei basicamente com o 
+intuito de que ele seja removido após eu fazer o stop da conexão. Usei volumes
+para trabalhar com a data da aplicação. preciso ainda testar alguns cenários, 
+mas O Docker cria um diretório no sistema de arquivos do host para esse volume 
+e o monta dentro do contêiner no local especificado (/var/lib/mysql neste caso)
+usando o comando --rm só remove o contêiner, não remove o volume associado a ele. 
+
+podemos criar volumes diferentes.
+
+docker volume ls
+
+sudo ls /var/lib/docker/volumes/levi_data/_data
+  buscando acesso aos arquivos
+
+MEUS COMANDOS DE CRIAÇÃO
+  penso que trabalhar com os contaienrs pelo terminal seja mais eficente, pelo
+  menos nesse cao de trabalhar com contaieners e configurações especificas
+
+docker run --rm -it --name <name> -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -v levi_data:/var/lib/mysql -d mysql:latest
+  pesquisar sobre otimizações no uso de containers em aplicações locais 
+  docker run --rm -it --name mysql-container -e MYSQL_ROOT_PASSWORD=sua_senha -p 3306:3306 -v /path/to/local/mysql_data:/var/lib/mysql --cpus 1 --memory 1g -d mysql:latest
+  docker run --rm -it --name api-cdc -e MYSQL_ROOT_PASSWORD=root -p 3306:3306 -v levi_data:/var/lib/mysql --cpus 0.5 --memory 512m -d mysql:latest
+
+docker container start <id>
+
+nas configurações minha db já é criada dentro do arquivo yml
+?useSSL=false&createDatabaseIfNotExist=true&allowPublicKeyRetrieval=true
+- createDatabaseIfNotExist=true
+
+ACESSANDO MYSQL PELO TERMINAL
+acho o uso mais facilitado.
+
+docker exec -it <id> mysql -uroot -proot  
+
+SHOW DATABASES;
+comandos sql diversos 
+SHOW DATABASES;
+USE <db>;
+SHOW TABLES;
+SELECT * FROM <table>
+
+
+ModelMapper with records
+==========
+
+https://stackoverflow.com/questions/62455515/how-can-i-use-java-records-as-dto-with-modelmapper
+
+
+The initial version for modelmapper with support for records is finally out. The new dependency for this is:
+
+<dependency>
+    <groupId>org.modelmapper</groupId>
+    <artifactId>modelmapper-module-record</artifactId>
+    <version>1.0.0</version>
+</dependency>
+
+You then need to register the RecordModule like so:
+
+private ModelMapper modelMapper = new ModelMapper().registerModule(new RecordModule());
+
+
+
+
+
