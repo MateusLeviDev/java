@@ -5,6 +5,8 @@ ou seja, quanto "mais próximas estão as coisas" menor a carga congnitiva da ap
   sem saber necessariamente o que estão fazendo de baixo dos panos.
 
 - variável serve para nos dar contexto acerca do que esta escrito 
+- sempre deixar claro as validações na borda do sistema (todo método está na borda
+do sistema).   
 
 
 
@@ -18,7 +20,10 @@ Docker
 
 criei um container com base na imagem do mysql:latest. criei basicamente com o 
 intuito de que ele seja removido após eu fazer o stop da conexão. Usei volumes
-para trabalhar com a data da aplicação. preciso ainda testar alguns cenários, 
+para trabalhar com a data da aplicação. preciso ainda testar alguns cenários,
+[após destruir o container ao criar novamente, usando o mesmo nome, mas acho que
+nomes dff seriam aceitos, fz teste, mas o volume permance salvo quando roda nova
+mente o docker run ]
 mas O Docker cria um diretório no sistema de arquivos do host para esse volume 
 e o monta dentro do contêiner no local especificado (/var/lib/mysql neste caso)
 usando o comando --rm só remove o contêiner, não remove o volume associado a ele. 
@@ -50,7 +55,6 @@ acho o uso mais facilitado.
 
 docker exec -it <id> mysql -uroot -proot  
 
-SHOW DATABASES;
 comandos sql diversos 
 SHOW DATABASES;
 USE <db>;
@@ -78,5 +82,14 @@ private ModelMapper modelMapper = new ModelMapper().registerModule(new RecordMod
 
 
 
+Validator
+==========
+
+https://www.baeldung.com/spring-mvc-custom-validator
+https://wkrzywiec.medium.com/how-to-check-if-user-exist-in-database-using-hibernate-validator-eab110429a6
+
+password and mail, maybe
+
+criar um validator default para valores unicos
 
 
