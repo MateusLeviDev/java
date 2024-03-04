@@ -1,4 +1,4 @@
-package org.levi.apicdc.apicdc.author;
+package org.levi.apicdc.apicdc.bookdetail.author;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

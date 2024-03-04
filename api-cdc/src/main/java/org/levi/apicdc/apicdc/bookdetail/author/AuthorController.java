@@ -1,4 +1,4 @@
-package org.levi.apicdc.apicdc.author;
+package org.levi.apicdc.apicdc.bookdetail.author;
 
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping
+@RequestMapping("/authors")
 public class AuthorController {
 
     private final AuthorService authorService;
