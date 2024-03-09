@@ -7,7 +7,9 @@ ou seja, quanto "mais próximas estão as coisas" menor a carga congnitiva da ap
 - variável serve para nos dar contexto acerca do que esta escrito 
 - sempre deixar claro as validações na borda do sistema (todo método está na borda
 do sistema).   
-
+- mais fácil se proteger pela borda mais externa da application e na mais interna
+por ex: usar o @Column(unique) ERROR 500 e validations ERROR 400.
+maximizar a defesa onde a lib ajuda
 
 
 
@@ -92,4 +94,26 @@ password and mail, maybe
 
 criar um validator default para valores unicos
 
+Aplicando o CDD (ideias iniciais)
+==========
 
+definir métricas derivadas do CDD
+testes automatizados modyfing condition decision convered
+ - onde foca em branches de códigos, cobruindo as linhas que tem decisão
+boudiring testting 
+
+
+MÉTRICA UTILIZADA (podem existir mais. nao sao vdd universais)
+estabelecer uma regua no que conta ponto na dificuldade de entendimento
+
+- todo acoplamento. por ex: um controller com ref a classes do spring, hibernate, 
+se for classe q nao sao especi do projeto nao conta pontos
+- função passada como argumento
+- branches de código. ex: if, else... etc
+
+Cadastro de um livro: livro (obrigatório), preço(obrigatório), e isbn(nao pode duplicado)
+Instancias de um livro: um livro pode ser de circulação livre ou restrita. 
+restringindo o tipo de usuário que pode ter acesso. livros de restrição livre
+podem ser pegos por qualquer usuario enquanto livros restritos por usuarios 
+que sao pesquisadores. Para cada combinação de livro + tipo de circulação temos 
+o que chamamos de instancias, na qual um livro tem um n° ilimitado
