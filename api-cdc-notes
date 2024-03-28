@@ -117,3 +117,43 @@ restringindo o tipo de usuário que pode ter acesso. livros de restrição livre
 podem ser pegos por qualquer usuario enquanto livros restritos por usuarios 
 que sao pesquisadores. Para cada combinação de livro + tipo de circulação temos 
 o que chamamos de instancias, na qual um livro tem um n° ilimitado
+
+
+case:
+INICIAR O MYSQL PELO TERMINAL A PARTIR DO DOCKER-COMPOSE.YML
+ - docker-compose up -d
+d -> para executar um container em segundo plano, em modo datached
+ou seja, será executado e o terminal é liberado para continuar trabalhando
+
+ - docker-compose exec order_db mysql -u user -ppassword order
+abrirá o shell
+
+ - SOURCE /docker-entrypoint-initdb.d/init_db.sql;
+WARM: Execute comandos SQL
+pode executar comandos SQL conforme necessário para inicializar o banco de dados. 
+Por exemplo, para importar um arquivo SQL chamado "init-schema.sql", você pode usar 
+o seguinte comando
+tomar como o base o compose.yml do order no ifood delivery
+
+explicando compose.yml
+
+PROFILES
+ Profiles help you adjust the Compose application model for various uses and environments 
+by selectively starting services.
+https://docs.docker.com/compose/profiles/
+
+Here the services frontend and phpmyadmin are assigned to the profiles frontend and debug 
+respectively and as such are only started when their respective profiles are enabled.
+
+Services without a profiles attribute are always enabled. In this case running docker 
+compose up would only start backend and db.
+Start specific profiles
+ - docker compose --profile local up
+-> estudar mais sobre o caso. mas é considerado o uso em sistemas distribuídos
+
+${HOST_PORT:-3312}:3306
+ - Definir dinamicamente as portas em um ambiente de desenvolvimento ou implantação
+ - Facilitar Integração com Outros Serviços
+ - Automatização e Orquestração
+
+<ESTUDAR MAIS SOBRE O CASO>
