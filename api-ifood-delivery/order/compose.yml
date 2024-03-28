@@ -1,8 +1,8 @@
 version: '3'
 services:
   order_db:
-    profiles:
-      - "local"
+#    profiles:
+#      - "local"
     platform: linux/x86_64
     container_name: order_database
     image: mysql:8.0.23
