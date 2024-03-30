@@ -4,6 +4,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.web.ErrorResponseException;
 
+/**
+ * @author levi
+ */
 public class CustomerNotFoundException extends ErrorResponseException {
 
     public CustomerNotFoundException(Integer id) {

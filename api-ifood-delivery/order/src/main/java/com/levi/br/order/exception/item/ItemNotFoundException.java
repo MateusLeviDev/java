@@ -5,6 +5,9 @@ import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ProblemDetail;
 import org.springframework.web.ErrorResponseException;
 
+/**
+ * @author levi
+ */
 public class ItemNotFoundException extends ErrorResponseException {
     public ItemNotFoundException(Integer id) {
         super(HttpStatus.NOT_FOUND, asProblemDetail("Item with id " + id + " not found"), null);
