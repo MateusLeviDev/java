@@ -1,12 +1,9 @@
 spring:
-  application:
-    name: order service
-  jpa:
-    hibernate:
-      ddl-auto: validate
-  jackson:
-    property-naming-strategy: SNAKE_CASE
-server:
-  port: 8080
-  servlet:
-    context-path: /api
+  docker:
+    compose:
+      profiles:
+        active: "local"
+  datasource:
+    username: user
+    password: password # we can use key vault or system variables to store the sensitive information
+    url: jdbc:mysql://localhost:3312/order

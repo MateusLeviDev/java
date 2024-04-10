@@ -40,7 +40,7 @@ public class OrderServiceImpl implements OrderService {
             Order order = orderRepository.save(
                     Order
                             .builder()
-                            .id(customerId)
+                            .customer(customerOptional.get())
                             .orderStatus(OrderStatus.PENDING)
                             .deliveryAddress(orderRequest.deliveryAddress())
                             .build()

@@ -1,9 +1,24 @@
 spring:
-  docker:
-    compose:
-      profiles:
-        active: "local"
-  datasource:
-    username: user
-    password: password # we can use key vault or system variables to store the sensitive information
-    url: jdbc:mysql://localhost:3312/order
+  application:
+    name: order service
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+
+#  kafka:
+#    bootstrap-servers: localhost:29092
+#    producer:
+#      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+#      retries: 5
+#      properties:
+#        "[request.timeout.ms]" : 100
+#        "[max.block.ms]": 100 # https://stackoverflow.com/questions/49487619/how-to-set-timeout-for-onfailure-event-spring-kafka
+# ideally we should have add a kafka health check, but it seems quite challenging. So, for now using the timeout option
+server:
+  port: 8080
+  servlet:
+    context-path: /api

@@ -53,26 +53,12 @@ CREATE TABLE orders (
 
 CREATE TABLE order_items (
     order_item_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    order_id INT UNSIGNED,
-    item_id INT UNSIGNED,
+    order_id INT UNSIGNED NOT NULL,
+    item_id INT UNSIGNED NOT NULL,
     quantity INT NOT NULL,
     notes TEXT,
     FOREIGN KEY (order_id) REFERENCES orders(order_id),
     FOREIGN KEY (item_id) REFERENCES items(item_id)
-);
-
--- billing table
-
-CREATE TABLE billing (
-    billing_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    order_id INT UNSIGNED,
-    total_amount DECIMAL(10, 2) NOT NULL,
-    tax DECIMAL(6, 2) NOT NULL,
-    discount DECIMAL(6, 2),
-    delivery_charge DECIMAL(6, 2),
-    payment_method VARCHAR(50) NOT NULL,
-    payment_status VARCHAR(20) NOT NULL,
-    FOREIGN KEY (order_id) REFERENCES orders(order_id)
 );
 
 -- Sample records into the `restaurants` table
