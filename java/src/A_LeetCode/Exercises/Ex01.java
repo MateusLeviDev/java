@@ -1,4 +1,4 @@
-package A_LeetCode.one;
+package A_LeetCode.Exercises;
 
 import java.util.Arrays;
 import java.util.HashMap;
