@@ -42,10 +42,23 @@ protected
 R: é um modificador de acesso que pode ser aplicado a membros de uma classe (como campos, métodos e construtores) ou à própria classe. 
 
 equals() vs ==
-Pass by Value or Reference
+R: Ambos os operadores têm finalidades distintas e devem ser usados em contextos apropriados, dependendo se você deseja comparar a igualdade de referência ou a igualdade de conteúdo. O método equals() é um método da classe Object em Java, e sua funcionalidade padrão é comparar a igualdade de conteúdo (valor) de dois objetos. No entanto, o comportamento específico de equals() pode ser substituído em classes personalizadas para realizar comparações mais significativas, com base no conteúdo dos objetos. O método equals() compara se dois objetos têm o mesmo conteúdo, conforme definido pela implementação da classe. O operador == em Java é usado para verificar se dois objetos têm a mesma referência na memória, ou seja, se eles apontam para o mesmo endereço de memória. Quando aplicado a tipos primitivos, == compara os valores diretos dos tipos. O comportamento de == não pode ser substituído ou modificado como o método equals().
+Use equals() para comparar conteúdo de objetos e implementar igualdade significativa.
+Use == para comparar referências de objetos e verificar se dois identificadores se referem ao mesmo objeto na memória.
+
+Pass by Value or Reference --------------------------------
+
 Singleton Class
+R: é um padrão de projeto que garante que uma classe tenha apenas uma instância e fornece um ponto de acesso global para essa instância. Isso é útil quando você deseja garantir que uma determinada classe tenha exatamente uma única instância em todo o seu programa e que essa instância seja acessível de maneira global.
+
 Composition
-static Block
-Remove from List
-ArrayLists
-Comparator vs Comparable
+R: descreve a capacidade de construir classes complexas a partir de outras classes menores, combinando-as como partes de um todo. É uma forma de reutilização de código e permite criar relacionamentos entre objetos de forma flexível e modular. Composição oferece maior flexibilidade do que herança porque permite que você altere o comportamento de uma classe dinamicamente durante a execução. Usar composição pode reduzir o acoplamento entre classes. A herança é útil quando você deseja reutilizar e estender comportamentos de uma classe base de forma direta e quando há uma relação clara de "é-um" entre a classe base e suas subclasses.
+
+static Block --------------------------------
+Remove from List --------------------------------
+ArrayLists --------------------------------
+
+Comparator vs Comparable 
+R: Em resumo, Comparable é usado para definir a ordem natural de classificação de objetos em uma classe específica, enquanto Comparator é usado para definir critérios de classificação personalizados ou múltiplos critérios de classificação sem modificar a classe original do objeto. Ambas as interfaces são poderosas ferramentas para implementar ordenação flexível em Java.
+Use Comparable quando você quer definir uma única maneira padrão de ordenar objetos de uma classe. Implementado na própria classe do objeto que está sendo ordenado.
+Use Comparator quando você quer definir múltiplos critérios de ordenação ou quando não pode modificar a classe original do objeto. Pode ser implementado em uma classe separada para definir critérios de ordenação específicos. Útil quando você precisa de flexibilidade para alterar a ordem de classificação sem modificar a classe dos objetos.
