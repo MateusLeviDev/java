@@ -2,19 +2,45 @@
 ocir raxied em iav inhavaj
 piovn an avaj ved omoc raicini ed iebaca
 FeLiZzZs0
-Questions
+
+(Questions)
 Method Overloading vs Overriding
+R: overloading é quando o método/função tem a mesma assinatura, porém seus argumentos são diferentes. E overriding nos permite acessar uma propriedade da classe pai, ou seja, a classe deve ter o sistema de herança, permitindo seu reuso.
+
 Heap vs Stack Memory
+R: são areas da memória para diferentes propósitos. A memória heap é uma região de memória dinamicamente alocada que é compartilhada por todos os threads (ou "fluxos de execução") em um aplicativo Java. Os objetos são alocados na memória heap usando o operador new. A alocação e liberação de memória são gerenciadas automaticamente pelo Garbage Collector (coletor de lixo) do Java. Os objetos na memória heap podem ser acessados por qualquer parte do programa, desde que exista uma referência válida para esses objetos. A memória heap pode crescer dinamicamente. enquanto a memória stack é usada para gerenciar a execução de métodos e armazenar variáveis locais de forma eficiente e rápida. A memória stack funciona com uma estrutura de dados do tipo pilha, onde as operações de inserção (push) e remoção (pop) seguem o princípio LIFO.
+
 Print Statement Code Snippet
+R: ---------------------------------------------------------------------------------------------------------------------- sysout, sout?
+
 Shallow vs Deep Copy
+R: a escolha entre Shallow Copy e Deep Copy depende dos requisitos específicos do seu aplicativo. A Shallow Copy é mais simples e eficiente em termos de uso de memória, mas pode introduzir compartilhamento de referências indesejado. Por outro lado, a Deep Copy cria cópias independentes, garantindo isolamento entre objetos, mas pode ser mais complexa de implementar e exigir mais recursos.
+
 Garbage Collector
+R: responsável por gerenciar a memória heap, liberando automaticamente a memória ocupada por objetos que não são mais referenciados pelo programa. O principal objetivo do Garbage Collector é evitar vazamentos de memória e tornar o desenvolvimento em Java mais conveniente. O processo de coleta de lixo envolve uma fase de marcação e varredura. O desempenho do Garbage Collector pode ser ajustado por meio de configurações e parâmetros específicos da JVM para otimizar o equilíbrio entre utilização de memória e tempos de pausa.
+
 Method vs Constructor
+R: Constructor é usado na inicialização de um objeto. um method é uma função associada a uma classe que define um comportamento ou uma ação que um objeto dessa classe pode realizar. Função: Realizar uma tarefa específica e pode ou não retornar um valor. Método: Interagir com os atributos do objeto e modificar seu estado ou comportamento.
+
 this
+R: Para referenciar ATRIBUTOS DA CLASSE. Ela pode ser utilizada em diferentes contextos para referenciar várias partes do objeto ou da classe em que está sendo utilizada. Um método pode retornar this, permitindo que o método seja encadeado. É possível passar this como argumento para outro método. 
+
 Abstract Class
+R: é uma classe que não pode ser instanciada diretamente, ou seja, você não pode criar um objeto diretamente a partir de uma classe abstrata. Em vez disso, uma classe abstrata serve como um modelo ou blueprint para outras classes que estendem (herdam) dela. Ela pode conter métodos abstratos (abstract methods), métodos concretos (implementados) e campos. Uma classe abstrata pode conter métodos abstratos, que são métodos sem implementação (sem corpo). As subclasses concretas devem implementar esses métodos abstratos.
+interface -> conjunto de métodos abstratos
+
 super
+R: basicamente chama o construtor da classe extendida.
+
 Generics
+R: Eles permitem que você escreva código que pode lidar com tipos específicos de forma genérica. A ideia por trás dos generics é promover a reutilização de código e a segurança de tipo. Evita Casts. Evitar conflitos por exemplo quando estamos usando JPA na definição dos tipos 
+
 final
+R: garante a imutabilidade. 
+
 protected
+R: é um modificador de acesso que pode ser aplicado a membros de uma classe (como campos, métodos e construtores) ou à própria classe. 
+
 equals() vs ==
 Pass by Value or Reference
 Singleton Class
