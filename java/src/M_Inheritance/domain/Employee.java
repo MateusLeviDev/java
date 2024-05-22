@@ -1,6 +1,6 @@
 package M_Inheritance.domain;
 
-public class Employee extends Person{
+public class Employee extends Person {
     private double salary;
 
     public double getSalary() {
