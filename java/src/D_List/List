@@ -1,0 +1,72 @@
+Collection in java: Any group of individual objects that are represented as a single unit is known
+as a Java Collection of Objects. o termo "collections" refere-se a uma estrutura de dados que permite
+armazenar e manipular grupos de objetos de forma eficiente.
+
+o que é um array?
+Uma estrutura de dados que armazena uma coleção de elementos de mesmo tipo.
+possui tamanho fixo, seu tamanho não aumenta dicamicamente por default, acesso direto pelo indexes
+homogeneidade.
+
+- No java temos um ArrayList no qual seu tamanho aumenta de forma dinâmica. Um arraylist no java
+faz parte do collections framework e é uma implementação da interface List.
+Advantages of Java ArrayList:
+    Dynamic size: ArrayList can dynamically grow and shrink in size, making it easy to add or remove elements as needed.
+    Easy to use: ArrayList is simple to use, making it a popular choice for many Java developers.
+    Fast access: ArrayList provides fast access to elements, as it is implemented as an array under the hood.
+    Ordered collection: ArrayList preserves the order of elements, allowing you to access elements in the order they were added.
+    Supports null values: ArrayList can store null values, making it useful in cases where the absence of a value needs to be represented.
+
+ArrayList can not be used for primitive types, like int, char, etc. We need a wrapper class for such cases.
+
+- quando um arraylist é redimensionado ele basicamente "destrói" o antigo array e cria um novo.
+Apesar de o redimensionamento ter complexidade O(n), o tempo médio (amortizado) para adicionar
+um elemento ao ArrayList é O(1). Isso ocorre porque o redimensionamento não acontece a cada adição,
+mas apenas ocasionalmente.
+Capacidade inicial de 1:
+
+    Adiciona 1 elemento → Nenhum redimensionamento (custo: 1)
+    Adiciona o 2º elemento → Redimensiona e copia 1 elemento (custo: 2)
+    Adiciona o 3º elemento → Redimensiona e copia 2 elementos (custo: 3)
+    Adiciona o 4º elemento → Nenhum redimensionamento (custo: 1)
+    Adiciona o 5º elemento → Redimensiona e copia 4 elementos (custo: 5)
+
+Conforme o ArrayList cresce, a frequência dos redimensionamentos diminui. Como o tamanho do array
+geralmente aumenta em uma proporção constante (como 50%)
+
+as operações de inserting e replacing tem time complexity de O(1) e space complexity de O(n)
+as operações de removing and transversing tem time complexity de O(n) e space complexity de O(1)
+
+Time Complexity (Complexidade de Tempo): Refere-se à quantidade de tempo que uma operação leva para
+ser concluída à medida que o tamanho da entrada aumenta. É uma medida de desempenho que ajuda a estimar
+a eficiência de um algoritmo.
+Exemplos: O(1), O(N), O(N^2), etc.
+
+Space Complexity (Complexidade de Espaço): Refere-se à quantidade de memória adicional que um algoritmo
+precisa além do espaço necessário para armazenar a entrada. Isso inclui variáveis temporárias, estruturas
+de dados auxiliares, etc.
+Exemplos: O(1), O(N), O(N^2), etc.
+
+List<Integer> arr = Arrays.asList(1,2,3,4,5,6);
+
+        //adding
+        arr.add(7);
+        arr.forEach(System.out::println);
+
+ Exception in thread "main" java.lang.UnsupportedOperationException
+ 	at java.base/java.util.AbstractList.add(AbstractList.java:155)
+ 	at java.base/java.util.AbstractList.add(AbstractList.java:113)
+ 	at D_List.ArrayList.Test2.main(Test2.java:11)
+
+cria uma lista que é mutável no sentido de que você pode modificar os elementos existentes (por exemplo,
+alterar o valor de um elemento), mas é de tamanho fixo, o que significa que você não pode adicionar ou
+remover elementos dela. está na verdade criando uma instância de java.util.Arrays.ArrayList, que é uma
+classe interna da classe java.util.Arrays. Arrays por sua vez possuem tamanho fixo por isso essa exception
+A classe java.util.Arrays.ArrayList é uma classe de "envoltório" (wrapper)
+
+a diferença principal entre copiar por referência e copiar pelo construtor é que a cópia por referência cria
+uma nova referência para o mesmo array original, enquanto a cópia pelo construtor cria um novo array com os
+mesmos elementos do array original, resultando em duas instâncias de array independentes.
+
+O uso de CopyOnWriteArrayList aqui garante que várias threads possam acessar e modificar a lista de eventos de
+forma segura, sem preocupações com concorrência ou condições de corrida. Além disso, como as operações de leitura
+são predominantes, a lista fornecerá uma consistência de leitura eficiente para todas as threads envolvidas.
