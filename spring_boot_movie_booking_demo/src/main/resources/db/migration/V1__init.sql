@@ -10,9 +10,10 @@ CREATE TABLE `ticket_info` (
 );
 
 CREATE TABLE `payment_info` (
-  paymentId CHAR(36) PRIMARY KEY,
-  accountNo VARCHAR(255) NOT NULL,
+  id BIGINT UNSIGNED NOT NULL AUTO_INCREMENT,
+  account_no VARCHAR(255) NOT NULL,
   amount DOUBLE NOT NULL,
-  cardType VARCHAR(50) NOT NULL,
-  ticketId BIGINT NOT NULL
+  card_type VARCHAR(50) NOT NULL,
+  ticket_id BIGINT NOT NULL,
+  PRIMARY KEY (id)
 );
