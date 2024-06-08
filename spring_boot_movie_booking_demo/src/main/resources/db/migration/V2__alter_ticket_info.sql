@@ -1,0 +1,1 @@
+ALTER TABLE ticket_info MODIFY ticket_prize DECIMAL(10, 2);
