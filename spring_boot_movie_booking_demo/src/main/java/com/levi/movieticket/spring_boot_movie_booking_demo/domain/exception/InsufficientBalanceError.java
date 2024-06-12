@@ -1,4 +1,4 @@
-package com.levi.movieticket.spring_boot_movie_booking_demo.api.exception;
+package com.levi.movieticket.spring_boot_movie_booking_demo.domain.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
