@@ -19,7 +19,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 @Slf4j
 @Transactional
-public class MovieTicketServiceImpl implements MovieTicketService {
+public class MovieTicketServiceImpl  implements MovieTicketService {
 
     private final TicketInfoRepository ticketInfoRepository;
     private final PaymentInfoRepository paymentInfoRepository;
